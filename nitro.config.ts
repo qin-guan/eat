@@ -10,5 +10,11 @@ export default defineNitroConfig({
     'eat': {
       driver: 'memory',
     }
-  }
+  },
+  serverAssets: [
+    {
+      baseName: 'templates',
+      dir: './templates'
+    }
+  ]
 });
