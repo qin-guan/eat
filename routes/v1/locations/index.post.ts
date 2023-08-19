@@ -22,4 +22,6 @@ export default defineEventHandler(async (event) => {
   await storage.setItem(APP_DATA_KEY, data)
 
   setResponseStatus(event, 201)
+  
+  return true
 })
