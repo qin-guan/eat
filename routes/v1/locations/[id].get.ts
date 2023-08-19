@@ -1,6 +1,6 @@
 import { AppData } from "../../../utils/data"
 
-export default defineEventHandler(async (event) => {
+export default defineCachedEventHandler(async (event) => {
   const { id } = getRouterParams(event)
 
   const storage = useStorage<AppData>('eat')
@@ -11,4 +11,7 @@ export default defineEventHandler(async (event) => {
     status: 404,
     message: 'Location not found'
   })
+}, {
+  swr: true,
+  maxAge: 60
 })

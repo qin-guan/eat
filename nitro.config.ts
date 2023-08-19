@@ -1,6 +1,10 @@
 //https://nitro.unjs.io/config
 export default defineNitroConfig({
   storage: {
+    cache: {
+      driver: 'cloudflare-kv-binding',
+      binding: 'KV_EAT'
+    },
     'eat': {
       driver: 'cloudflare-kv-binding',
       binding: 'KV_EAT'
